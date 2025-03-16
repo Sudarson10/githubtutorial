@@ -1,0 +1,248 @@
+1.Created a repository named githubtutorial with readme in GitHub
+2.cloned it(so main branch automatically created)
+3.git checkout -b dev1(dev1 created)
+4.git checkout -b dev2(dev2 created)
+5.add 1.txt in githubtutorial folder
+5.git add .
+6.git commit -m"1.txt"
+7.git push origin dev1
+8.git checkout main
+9.git merge dev1
+10.git checkout dev2
+11.git merge main
+12.add 2.txt in githubtutorial folder
+13.git add.
+14.git commit -m"2.txt"
+15.git push origin dev2
+16.git checkout main
+17.git merge dev2
+
+Below Entire cmd commands
+Microsoft Windows [Version 10.0.26100.3194]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects>git clone https://github.com/Sudarson10/githubtutorial.git
+Cloning into 'githubtutorial'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects>cd githubtutorial
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git checkout -b main
+fatal: a branch named 'main' already exists
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git checkout -b dev1
+Switched to a new branch 'dev1'
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git status
+On branch dev1
+nothing to commit, working tree clean
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git branch
+* dev1
+  main
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git checkout -b dev2
+Switched to a new branch 'dev2'
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git branch
+  dev1
+* dev2
+  main
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git checkout dev1
+Switched to branch 'dev1'
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git add .
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git commit -m"added 1.txt"
+[dev1 e7b2132] added 1.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.txt
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git push origin main
+Everything up-to-date
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git add .
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git commit -m"added 1.txt"
+On branch dev1
+nothing to commit, working tree clean
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git push origin dev1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 289 bytes | 289.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'dev1' on GitHub by visiting:
+remote:      https://github.com/Sudarson10/githubtutorial/pull/new/dev1
+remote:
+To https://github.com/Sudarson10/githubtutorial.git
+ * [new branch]      dev1 -> dev1
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git merge dev1
+Updating c9e4004..e7b2132
+Fast-forward
+ 1.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.txt
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git checkout dev2
+Switched to branch 'dev2'
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git pull origin main
+From https://github.com/Sudarson10/githubtutorial
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git merge main
+Updating c9e4004..e7b2132
+Fast-forward
+ 1.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.txt
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git status
+On branch dev2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git add .
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git commit -m"added 2.txt"
+[dev2 71cde6a] added 2.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2.txt
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git push origin dev2
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 288 bytes | 288.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'dev2' on GitHub by visiting:
+remote:      https://github.com/Sudarson10/githubtutorial/pull/new/dev2
+remote:
+To https://github.com/Sudarson10/githubtutorial.git
+ * [new branch]      dev2 -> dev2
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git merge dev2
+Updating e7b2132..71cde6a
+Fast-forward
+ 2.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2.txt
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git checkout dev1
+Switched to branch 'dev1'
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git merge main
+Updating e7b2132..71cde6a
+Fast-forward
+ 2.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2.txt
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git status
+On branch dev1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git add .
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git commit -m"wrote 1st line in 1.txt"
+[dev1 ce96daa] wrote 1st line in 1.txt
+ 1 file changed, 2 insertions(+)
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git push origin dev1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 356 bytes | 356.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Sudarson10/githubtutorial.git
+   e7b2132..ce96daa  dev1 -> dev1
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git checkout dev2
+Switched to branch 'dev2'
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git merge dev1
+Updating 71cde6a..ce96daa
+Fast-forward
+ 1.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git status
+On branch dev2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git add .
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git commit -m"wrote 2nd line in 1.txt"
+[dev2 ba7c765] wrote 2nd line in 1.txt
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git push origin dev2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 378 bytes | 378.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Sudarson10/githubtutorial.git
+   71cde6a..ba7c765  dev2 -> dev2
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git merge dev1
+Updating 71cde6a..ce96daa
+Fast-forward
+ 1.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git merge dev2
+Updating ce96daa..ba7c765
+Fast-forward
+ 1.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git checkout dev1
+Switched to branch 'dev1'
+
+C:\Users\sudar\OneDrive\Desktop\miniprojects\githubtutorial>git merge main
+Updating ce96daa..ba7c765
+Fast-forward
+ 1.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
